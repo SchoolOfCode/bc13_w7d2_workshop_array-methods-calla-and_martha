@@ -16,3 +16,23 @@ const students = [
   "Luna Lovegood",
   "Gregory Goyle",
 ];
+
+
+// 👉 6a. Using the .sort() method, rearrange the brooms (numbers) in the broomCupboard array so 
+// that they are in ASCENDING order, with broomstick 1 at index 0 and broomstick 10 and index 9.
+
+let sortedBrooms = broomCupboard.sort((a,b) => a-b)
+console.log(sortedBrooms)
+
+// 👉 6b. Using the .sort() method and the shelf property of each potions object, rearrange 
+// the four potions in the 'potions' array so they are in DESCENDING order of their shelves, 
+// with the 'draught of living death' at index 0 and the 'pepperup potion' at index 3.
+
+let sortedPotions = potions.sort((a,b) => b.shelf-a.shelf)
+console.log(sortedPotions)
+
+// 👉 6c. Sort the names in the array in alphebetical order according to their last name.
+
+// splitting each name into array and selecting [1] (i.e. the last name) & comparing
+let sortedByLastName = students.sort((a, b) => a.split(' ')[1].localeCompare(b.split(' ')[1]));
+console.log(sortedByLastName);
